@@ -20,7 +20,14 @@
 
             <div class="col-md-8">
                 <div class="card">
+
                     <div class="card-header">Pizza's</div>
+                    @if(count($errors)>0)
+                        @foreach($errors->all() as $error)
+                            <div class="alert alert-danger">{{$error}}</div>
+                        @endforeach
+                        @endif
+                    <form action="{{route('pizza.store')}}" method="post">@csrf
 
                     <div class="card-body">
                       <div class="form-group">
@@ -38,8 +45,8 @@
                             <input type="number" name="large_pizza_price" class="form-control" placeholder="Large Pizzas Price">
                         </div>
                         <div class="form-group">
-                            <label for="category">Pizza's Category</label>
-                            <select class="form-control">
+                            <label  for="category">Pizza's Category</label>
+                            <select name="category" class="form-control">
                                 <option value=""></option>
                                 <option value="vegetarian">Vegetarian</option>
                                 <option value="nonvegetarian">Non Vegetarian</option>
@@ -55,7 +62,9 @@
                             <button class="btn btn-primary" type="submit">Save</button>
                         </div>
                     </div>
+                    </form>
                 </div>
+
             </div>
         </div>
     </div>
