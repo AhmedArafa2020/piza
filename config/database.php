@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
-$DATABASE_URL = parse_url("postgres://stxyuxgvzqozqk:9d0725fae3a2f9c5d1c20eff218e41daf6a286bc8ae1d4f899453b43478569d3@ec2-54-81-126-150.compute-1.amazonaws.com:5432/d4rrlt334e0bvc");
+$DATABASE_URL = parse_url("postgres://xklhgptjdeuqkg:a41d963d8ad3acc8131e52710f75f3049a6de93901e9ef0bbcae0ba38d89cd3c@ec2-34-194-123-31.compute-1.amazonaws.com:5432/dbpl72it593dhm");
 
 return [
 
@@ -64,7 +64,7 @@ return [
             ]) : [],
         ],
 
-      
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => $DATABASE_URL["host"],
