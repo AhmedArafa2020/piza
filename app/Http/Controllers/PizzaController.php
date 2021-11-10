@@ -50,7 +50,7 @@ class PizzaController extends Controller
 
            ]
        );
-       return redirect()->route('pizza.index');
+        redirect()->route('pizza.index')->with('message','Pizza Addedd Success ya7alawa ');
     }
 
     /**
